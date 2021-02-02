@@ -5,18 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
   <title>Vue.js Components Fundamentals</title>
 </head>
 
 <body>
-  <div id="app">
-    <h1>Vue.js Components Fundamentals</h1>
-    <click-counter></click-counter>
-    <click-counter></click-counter>
-    <click-counter></click-counter>
-    <click-counter></click-counter>
+  <div id="app" class="container mx-auto py-6">
+    <!-- <div>
+      <h1 class="plans mx-auto py-6">Vue.js Components Fundamentals</h1>
+    <click-counter class="plans"></click-counter>
+    <click-counter class="plans"></click-counter>
+    <click-counter class="plans"></click-counter>
+    <click-counter class="plans"></click-counter>
+    </div> -->
+
+    <!-- <h1 class="plans title">A more realistic example with</h1> -->
+
+    <div class="container mx-auto py-6" id="logo">
+        <div class="content">
+          <h1 class="title">Coffee Plans</h1>
+          <h2 class="subtitle"> We travel the world for coffee</h2>
+        </div>
+        <plan-picker></plan-picker>
+      </div>
   </div>
 
+  <!-- <script type="text/x-template" id="click-counter-template">
+    <div>
+      <p> The count is:</p>
+      <button @click="count++">{{count}}</button>
+    </div>
+  </script> -->
+
+  <script type="text/x-template" id="plan-picker-template">
+    <div class="plans">
+      <plan v-for='plan in plans' :name="plan"></plan>
+    </div>
+  </script>
+
+  <script type="text/x-template" id="plan-template">
+    <div class="plan">
+      <div class="description">
+        <span class="title">{{name}}</span>
+      </div>
+    </div>
+  </script>
 
   <script src="https://unpkg.com/vue"></script>
   <script src="app.js"></script>
