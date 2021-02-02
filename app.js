@@ -7,8 +7,8 @@
 //   }
 // }),
 
-let planComponent = {
-  template: '#plan-template',
+let PlanPickerItemComponent = {
+  template: '#plan-picker-item-template',
   props:{
     name: {
       type: String,
@@ -33,7 +33,7 @@ let planComponent = {
 let PlanPickerComponent = {
   template: '#plan-picker-template',
   components: {
-    plan: planComponent
+    'plan-picker-item': PlanPickerItemComponent
   },
   data() {
     return {
